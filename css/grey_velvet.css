@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  background-color: #ffffff;
+  font-family: sans-serif;
+}
+
+/* 页面主容器 */
+.grey_velvet-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+/* 左側書本區 */
+.book-section {
+  position: relative;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* 让书页和按钮上下分布 */
+  margin-bottom: 1.5%;
+}
+
+/* 書本底層 */
+.book-base {
+  background-color: #92b7d0;
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  left: 0;
+  border-radius: 0 8px 8px 0;
+  z-index: 1;
+  margin-top: 8%;
+}
+
+/* 書頁上層 */
+.book-inner {
+  background-color: #f5f5ef;
+  width: 86%;
+  height: 86%;
+  left: 0;
+  margin-top: 10%;
+  position: absolute;
+  z-index: 2;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 0 6px 6px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+}
+
+.library-code-btn {
+    padding: 10px 30px;
+    background-color: #92b7d0;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    width: fit-content;
+    max-width: 200px;
+    text-align: center;
+    align-self: center; /* 让按钮在书页中居中 */
+    margin-top: auto;   /* 推到底部 */
+}  
+
+/* 圖片區 */
+.texture-image,
+.soundwave-image {
+  height: 180px;
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+/* 音樂播放器區 */
+.music-player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.controls button {
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+/* 播放速度控制條 */
+.speed-control {
+  position: absolute;
+  background-color: #b6d2e4;
+  border-radius: 0 6px 6px 0;
+  top: 80%;
+  right: 20px;
+  writing-mode: vertical-rl;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.speed-control input {
+  height: 100px;
+  writing-mode: bt-lr;
+  transform: rotate(180deg);
+}
+
+/* 右側動畫 Canvas */
+.p5-canvas-container {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+}
+
+#p5-holder {
+  width: 100%;
+  height: 100%;
+}
+
