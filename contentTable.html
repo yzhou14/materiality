@@ -1,0 +1,48 @@
+<!-- book.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Content Table</title>
+  <link rel="stylesheet" href="css/contentTable.css">
+</head>
+<body>
+  <div class="book-view">
+    <!-- book cover -->
+    <div class="book-base"></div>
+    
+    <!-- book page -->
+    <div class="book-inner">
+      <!-- book spine -->
+      <div class="spine"></div>
+
+      <!-- 左右頁容器 -->
+      <div class="page-columns">
+        <!-- 左頁 -->
+        <div class="content-table left-page">
+          <div class="content-item" onclick="location.href='page1.html'">
+            <div class="texture-preview"></div>
+            <div class="sound-preview"></div>
+          </div>
+          <div class="content-item" onclick="location.href='page2.html'">
+            <div class="texture-preview"></div>
+            <div class="sound-preview"></div>
+          </div>
+        </div>
+
+        <!-- 右頁 -->
+        <div class="content-table right-page">
+          <div class="content-item" onclick="location.href='page3.html'">
+            <div class="texture-preview"></div>
+            <div class="sound-preview"></div>
+          </div>
+          <div class="content-item" onclick="location.href='page4.html'">
+            <div class="texture-preview"></div>
+            <div class="sound-preview"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

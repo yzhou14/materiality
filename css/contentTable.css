@@ -1,0 +1,102 @@
+body {
+    background-color: #ffffff;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .book-view {
+    position: relative;
+    width: 800px;
+    height: 500px;
+  }
+  
+  /* book cover */
+  .book-base {
+    background-color: #92b7d0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    border-radius: 8px;
+  }
+  
+  /* book page */
+  .book-inner {
+    background-color: #f5f5ef;
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    width: 94%;
+    height: 94%;
+    z-index: 2;
+    border-radius: 6px;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+  
+  /* book spine */
+  .spine {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background-color: #92b7d0;
+    z-index: 3;
+  }
+  
+  .page-columns {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    box-sizing: border-box;
+    gap: 20px;
+  }
+  
+  .content-table {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .left-page {
+    padding-right: 12px;
+  }
+  
+  .right-page {
+    padding-left: 12px;
+  }
+  
+  /* content-items */
+  .content-item {
+    display: flex;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .content-item:hover {
+    transform: scale(1.02);
+  }
+  
+  /* left texture pic */
+  .texture-preview {
+    width: 40%;
+    height: 100px;
+    background-color: #ccc; /* TODO: change later */
+  }
+  
+  /* right sound-wave pic */
+  .sound-preview {
+    width: 60%;
+    height: 100px;
+    background-image: url('assets/sound-wave.png');
+    background-size: cover;
+    background-position: center;
+  }
+  

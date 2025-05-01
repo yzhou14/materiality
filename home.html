@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+    <div class="bookshelf">
+        <div class="base-layer"></div>
+        <div class="inner-layer"></div>
+
+        <div class="books-layer">
+        <!-- books -->
+        <div class="book" onclick="openBook(this)"></div>
+        <div class="book"></div>
+        <div class="book"></div>
+        </div>
+
+        <div class="slots-layer">
+        <div class="slot"></div>
+        <div class="slot"></div>
+        <div class="slot"></div>
+        <div class="slot"></div>
+        </div>
+        
+    </div>
+
+    <script>
+      function openBook(bookElement) {
+        // Copy the location and format of book that's clicked
+        const rect = bookElement.getBoundingClientRect();
+        const clone = bookElement.cloneNode(true);
+        clone.classList.add("opening");
+        document.body.appendChild(clone);
+    
+        // set original position
+        clone.style.position = "fixed";
+        clone.style.top = rect.top + "px";
+        clone.style.left = rect.left + "px";
+        clone.style.width = rect.width + "px";
+        clone.style.height = rect.height + "px";
+        clone.style.transform = "none";
+    
+        // trigger reflow
+        clone.offsetHeight;
+    
+        // start animation
+        clone.style.transform = "translate(-50%, -50%) scale(2) rotateY(180deg)";
+        clone.style.top = "50%";
+        clone.style.left = "50%";
+    
+        // open + jump to next page (1.5s)
+        setTimeout(() => {
+          window.location.href = "contentTable.html";
+        }, 1500);
+      }
+    </script>
+</body>
+</html>
