@@ -33,7 +33,7 @@ body {
   
   /* book cover */
   .book-base {
-    background-image: url('../assets/texture/Book\ Cover-Metalic.svg');
+    background-image: url('../assets/texture/Book\ Cover-Natural.svg');
     background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;

@@ -1,4 +1,5 @@
 const playBtn = document.getElementById("play-pause");
+const playPauseIcon = document.getElementById("playPauseIcon");
 const speedSlider = document.getElementById("speedRange");
 const speedDisplay = document.getElementById("speedValue");
 const audio = document.getElementById("audio"); // 取得audio元素
@@ -9,10 +10,10 @@ let isPlaying = false;
 playBtn.addEventListener("click", () => {
   if (!isPlaying) {
     audio.play();
-    playBtn.textContent = "⏸"; // 播放時按鈕變成暫停
+    playPauseIcon.src = "assets/Pause.svg"; // 播放時按鈕變成暫停
   } else {
     audio.pause();
-    playBtn.textContent = "▶"; // 暫停時按鈕變成播放
+    playPauseIcon.src = "assets/Play.svg" // 暫停時按鈕變成播放
   }
   isPlaying = !isPlaying;
 });
