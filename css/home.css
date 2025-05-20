@@ -14,24 +14,16 @@ body {
   
   /* Base brown layer */
   .base-layer {
-    background-color: #c38356;
+    background-image: url(/assets/Bookshelf_base.svg);
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
-  }
-  
-  /* Inner baige layer */
-  .inner-layer {
-    background-color: #f5f5dc;
-    width: 95%;
-    height: 96%;
-    position: absolute;
-    top: 2%;
-    left: 2.5%;
-    z-index: 2;
   }
   
   /* books layer */
