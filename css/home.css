@@ -8,20 +8,20 @@ body {
   
   .bookshelf {
     position: relative;
-    width: 400px;
-    height: 600px;
+    width: 420px;
+    height: 750px;
   }
   
   /* Base brown layer */
   .base-layer {
-    background-image: url(/assets/Bookshelf_base.svg);
+    background-image: url('../assets/Bookshelf_base.svg');
     background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 100%;
+    height: 85%;
     position: absolute;
-    top: 0;
+    top: 13%;
     left: 0;
     z-index: 1;
   }
@@ -29,20 +29,20 @@ body {
   /* books layer */
   .books-layer {
     position: absolute;
-    top: 10%;
+    top: 17%;
     left: 10%;
     width: 80%;
     height: 80%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
-    z-index: 3;
+    z-index: 10;
   }
   
   .book {
-    background-color: #92b7d0;
+    background-color: #ffffff;
     width: 100%;
-    height: 100px;
+    height: 130px;
     border-radius: 5px;
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
@@ -50,40 +50,43 @@ body {
   
   /* moving up when hovering */
   .book:hover {
-    transform: translateY(-20px);
+    transform: translateY(-75px);
   }
 
-  /* enlarging when clicked */
-.book.opening {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 400px;
-  height: 300px;
-  transform: translate(-50%, -50%) scale(2) rotateY(0deg);
-  z-index: 9999;
-  transition: transform 0.8s ease-in-out;
-}
+  .bookmark-button {
+    position: absolute;
+    background: none;
+    border: none;
+    width: 56px;
+    height: 93px;
+    top: 0%;
+    right: 75%;
+    cursor: pointer;
+    z-index: 5;
+  }
   
   /* bookshelf slots */
   .slots-layer {
     position: absolute;
-    top: 0;
+    top: 15%;
     left: 0;
     width: 100%;
-    height: 100%;
-    z-index: 4;
+    height: 88%;
+    z-index: 15;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 50px 0;
+    padding: 0px;
     pointer-events: none;
   }
   
   .slot {
-    background-color: #e2ddcb;
-    height: 75px;
-    margin: 0 5px;
+    background-image: url('../assets/Bookshelf\ block.svg');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70px;
+    margin: 0px;
     border-radius: 2px;
   }
   

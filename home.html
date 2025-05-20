@@ -7,30 +7,43 @@
 </head>
 
 <body>
-    <div class="bookshelf">
-        <div class="base-layer"></div>
-        <div class="inner-layer"></div>
 
-        <div class="books-layer">
-          <div class="book" onclick="openBook(1)"></div>
-          <div class="book" onclick="openBook(2)"></div>
-          <div class="book" onclick="openBook(3)"></div>
-        </div>
+  <div class="bookshelf">
+    <div class="base-layer"></div>
 
-        <div class="slots-layer">
-          <div class="slot"></div>
-          <div class="slot"></div>
-          <div class="slot"></div>
-          <div class="slot"></div>
-        </div>   
+    <div class="books-layer">
+      <div class="book" onclick="openBook(1)">
+        <img src="assets/texture/Book-Metalic.svg" alt="Book-Metalic" />
+      </div>
+      <div class="book" onclick="openBook(2)">
+        <img src="assets/texture/Book-Natural.svg" alt="Book-Natural" />
+      </div>
+      <div class="book" onclick="openBook(3)">
+        <img src="assets/texture/Book-Born with.svg" alt="Book-Born" />
+      </div>
     </div>
 
-    <script>
-      function openBook(index) {
-        const pages = ["content01.html", "content02.html", "content03.html"];
-        window.location.href = pages[index - 1];
-      }
-    </script>
+    <div class="bookmark">
+      <!--Bookmark SVG-->
+      <button class="bookmark-button" onclick="">
+        <img src="assets/Plant.svg" alt="Bookmark" />
+      </button>
+    </div>
+
+    <div class="slots-layer">
+      <div class="slot"></div>
+      <div class="slot"></div>
+      <div class="slot"></div>
+      <div class="slot"></div>
+    </div>   
+  </div>
+
+  <script>
+    function openBook(index) {
+      const pages = ["content01.html", "content02.html", "content03.html"];
+      window.location.href = pages[index - 1];
+    }
+  </script>
 
 </body>
 </html>
